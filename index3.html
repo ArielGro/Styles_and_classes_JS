@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Toggle Visibility</title>
+    <style>
+        .Visible {
+            display: block;
+        }
+
+        .Invis {
+            display: none;
+        }
+    </style>
+</head>
+<body class="Visibility">
+    <div class=" Visible"><p>This is a sample paragraph.</p></div>
+    <button onClick="toggleVisible()">Toggle Visibility</button>
+
+    <script>
+        function toggleVisible() {
+            const element = document.querySelector('div')
+
+            if (element.classList.contains("Visible")){
+                element.className = "Invis"
+            }
+            else {
+                element.className = "Visible"
+            }
+        }
+    </script>
+</body>
+</html>
