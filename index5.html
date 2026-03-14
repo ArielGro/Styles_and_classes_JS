@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+    <style>
+        .highlight {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>רשימה</h1>
+
+    <ul id="class-list">
+        <li onclick="highlightStudent(this)">דן</li>
+        <li onclick="highlightStudent(this)">שירה</li>
+        <li onclick="highlightStudent(this)">אורי</li>
+        <li onclick="highlightStudent(this)">נועה</li>
+    </ul>
+
+    <script>
+        function highlightStudent(student) {
+            let highlighted = document.querySelector('.highlight');
+            if (highlighted) {
+                highlighted.classList.remove('highlight');
+            }
+            if (highlighted !== student) {
+                student.classList.add('highlight');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
